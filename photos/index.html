@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photos — Our Wedding Weekend</title>
+<meta property="og:title" content="Photos — Our Wedding Weekend">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/photos.css">
+<link rel="preload" href="/assets/photos/photos.json" as="fetch" crossorigin>
+<style>
+.gf{--rows-m:5;--rows-d:3}
+.gfb0{grid-area:2/2/5/10;z-index:0;--v:start}
+@media(min-width:768px){.gfb0{grid-area:2/2/4/26;z-index:0;--v:start}}
+</style>
+<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/photos.js" defer></script>
+</head>
+<body class="photos-page">
+<header class="site-header" data-theme="black">
+<div class="header-bar">
+<div class="header-desktop">
+<div class="header-title-nav">
+<nav class="header-nav" aria-label="Main"><a class="nav-link" href="/faqs">FAQs</a><a class="nav-link" href="/when-where">When &amp; Where</a><a class="nav-link" href="/music">Music</a><a class="nav-link" href="/activities">Activities</a></nav>
+<div class="site-title"><a href="/">Our Wedding Weekend</a></div>
+</div>
+<div class="header-actions"><a class="btn btn-header" href="/photos" aria-current="page">Photos</a></div>
+</div>
+<div class="header-mobile">
+<div class="site-title"><a href="/">Our Wedding Weekend</a></div>
+<button class="burger" type="button" aria-label="Open Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</div>
+</div>
+</header>
+<div class="menu-overlay" id="menu" data-theme="light" hidden>
+<nav class="menu-nav" aria-label="Mobile"><div class="menu-item"><a class="menu-link" href="/faqs">FAQs</a></div><div class="menu-item"><a class="menu-link" href="/when-where">When &amp; Where</a></div><div class="menu-item"><a class="menu-link" href="/music">Music</a></div><div class="menu-item"><a class="menu-link" href="/activities">Activities</a></div></nav>
+<div class="menu-cta"><a class="btn btn-header" href="/photos" aria-current="page">Photos</a></div>
+</div>
+<main>
+<section class="section photos-hero has-bg" data-theme="black">
+<div class="section-bg"><img src="/assets/photos/full/d-0101.webp" alt="" decoding="async" fetchpriority="high"><div class="photos-hero-shade"></div></div>
+<div class="section-content text">
+<h2 class="ta-c">Photos</h2>
+<p class="ta-c">September 19, 2026 · Castello di Mugnana</p>
+</div>
+</section>
+<section class="section photos" data-theme="white">
+<div class="photos-bar">
+<div class="photos-toggle" role="tablist" aria-label="Photo set">
+<span class="photos-toggle-pill" aria-hidden="true"></span>
+<button type="button" role="tab" id="tab-favourites" aria-controls="gallery" aria-selected="true" data-view="favourites">Favourites</button>
+<button type="button" role="tab" id="tab-all" aria-controls="gallery" aria-selected="false" data-view="all">All photos <span class="photos-count"></span></button>
+</div>
+<button type="button" class="photos-select-btn" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/></svg><span>Select</span></button>
+<div class="photos-sub">
+<p class="photos-blurb">A few of our favourite moments from the day. Photos by <a href="https://www.carlottanucci.com" target="_blank" rel="noopener">Davide and Carlotta</a>.</p>
+<nav class="photos-chapters" aria-label="Sections"></nav>
+</div>
+</div>
+<div class="photos-gallery" id="gallery" role="tabpanel" aria-labelledby="tab-favourites">
+<noscript><p class="photos-note">Please enable JavaScript to view the photos.</p></noscript>
+</div>
+<div class="photos-more">
+<button type="button" class="btn btn-block photos-see-all" data-view="all">See all photos</button>
+</div>
+</section>
+</main>
+<div class="photos-selectbar" role="region" aria-label="Selected photos" hidden>
+<div class="photos-selectbar-main">
+<span class="photos-selectbar-count" aria-live="polite">Tap photos to select them</span>
+<div class="photos-selectbar-actions">
+<button type="button" class="photos-sel-clear">Clear</button>
+<button type="button" class="btn photos-sel-download" disabled>Download</button>
+<button type="button" class="photos-sel-done">Done</button>
+</div>
+</div>
+<p class="photos-selectbar-note" aria-live="polite" hidden></p>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+<div class="lightbox-backdrop"></div>
+<div class="lightbox-track"></div>
+<div class="lightbox-ui">
+<div class="lightbox-top">
+<span class="lightbox-counter" aria-live="polite"></span>
+<div class="lightbox-actions">
+<button type="button" class="lightbox-play" aria-label="Play slideshow" aria-pressed="false"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5v14M15.5 5v14"/></svg></button>
+<a class="lightbox-download" href="#" aria-label="Download full-quality photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 19.5h14"/></svg></a>
+<button type="button" class="lightbox-close" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+</div>
+</div>
+<button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg></button>
+<button type="button" class="lightbox-nav lightbox-next" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg></button>
+<div class="lightbox-caption"></div>
+</div>
+</div>
+<footer class="site-footer">
+<section class="section h-custom" data-theme="bright">
+<div class="section-content">
+<div class="grid gf">
+<div class="blk blk-text gfb0">
+<div class="text">
+<h4 class="ta-c">Hannah &amp; Graham</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+</footer>
+</body>
+</html>
